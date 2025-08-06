@@ -16,10 +16,10 @@ public class UserService implements UserDetailsService{
     @Autowired
     UserRepository userRepository;
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // TODO Auto-generated method stub
-        return userRepository.findByEmail(username);
-    }
+     @Override
+     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+         // TODO Auto-generated method stub
+         return userRepository.findByEmail(username);
+     }
      
 }

@@ -26,8 +26,8 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String passward;
+    private String name;
+    private String password;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -48,7 +48,7 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return passward;
+        return password;
     }
 
     @Override
